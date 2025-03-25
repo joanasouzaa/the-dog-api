@@ -13,7 +13,6 @@
 - CSS
 - JavaScript
 - API "The Dog API"
-- 
 
 ## Como usar
 - Clone este repositório: ```gh repo clone joanasouzaa/the-dog-api```.
@@ -29,5 +28,5 @@
 - A quantidade de cães exibidos por página é definida no limit passado na URL contido no script.js.
   
 
-Autor
+Autor:
 Joana Amorim de Souza
