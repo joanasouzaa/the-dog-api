@@ -1,10 +1,9 @@
 # Galeria de Doguinhos
 - Este projeto exibe uma galeria de raças de cachorros usando dados da API "The Dog API". Ele inclui paginação para navegar entre as diferentes raças.
-
 - Este projeto foi desenvolvido como um trabalho da disciplina "Tecnologias de Front-end" do curso de Análise e Desenvolvimento de Sistemas na UNIMAR.
 
 ## Funcionalidades
-- Exibe informações sobre as raças de cachorros, incluindo nome, imagem, tamanho, temperamento, propósito da raça e origem;
+- Exibe informações sobre as raças de cachorros, incluindo nome, imagem, tamanho, temperamento, criado para, expectativa de vida e origem;
 - Permite navegar entre as páginas de raças usando botões "Anterior" e "Próximo";
 - Lida com erros de carregamento e exibe mensagens caso aconteça um erro.
 
