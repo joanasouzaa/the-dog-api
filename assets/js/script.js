@@ -6,9 +6,10 @@ let currentPage = 1;
 async function getDogs(page) {
     try {
         container.innerHTML = "Carregando..."
+        const limit = 30;
 
         const api_key = 'live_doklWwlXyQJgYy2u81qtIwqZTY8OwCU3TeCgyrMyuoG1H6I8BmLuZ5jZbvg3IBzz'; // API KEY necessária para obter imagens
-        const response = await fetch(`https://api.thedogapi.com/v1/breeds/?limit=1&page=${page}`, {
+        const response = await fetch(`https://api.thedogapi.com/v1/breeds/?limit=${limit}&page=${page}`, {
             headers: {
                 'x-api-key': api_key // esta parte pesquisei como implementava a chave de API, já que a documentação informa que para acessar as imagens é necessário solicitar sua API KEY
             }
@@ -23,14 +24,12 @@ async function getDogs(page) {
             card.innerHTML = `
                 <img src="${dog.image.url}" alt="${dog.name}">  
                 <h3>${dog.name}</h3>
-                <p>Height: ${dog.height.metric} cm</p>
-                <p>Temperament: ${dog.temperament}</p>
-                <p>Bred for: ${dog.bred_for}</p>
-                <p>Life span: ${dog.life_span}</p>
-                <p>Origin: ${dog.origin == "" ? "undefined" : dog.origin}</p>
-            `; // nesta parte do 'Origin' vi que alguns dados retornavam vazio (""), então para ficar igual aos que retornavam "undefined", fiz essa lógica 
+            `; 
+            card.addEventListener('click', ()=>{
+                window.location.href = `dog.html?id=${dog.id}`;
+            });
             container.appendChild(card);
-        });
+        })
         prevButton.disabled = currentPage == 1;
 
     } catch (error) {
