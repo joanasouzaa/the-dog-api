@@ -16,7 +16,7 @@ async function getDogs(page) {
         });
         const data = await response.json();
         container.innerHTML = "";
-        // console.log(data)
+        console.log(data)
 
         data.forEach(dog => {
             const card = document.createElement('div');

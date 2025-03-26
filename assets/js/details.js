@@ -21,7 +21,6 @@ async function getDogDetails(dogId) {
         
         containerDetail.innerHTML = "";
 
-
             const card = document.createElement("div");
             card.className = 'card';
             card.innerHTML = `
@@ -34,7 +33,7 @@ async function getDogDetails(dogId) {
             <p>Origin: ${data.origin == "" ? "undefined" : data.origin}</p>
             `; // nesta parte do 'Origin' vi que alguns dados retornavam vazio (""), então para ficar igual aos que retornavam "undefined", fiz essa lógica 
             containerDetail.append(card);
-            prevButton.disabled = currentPage == 1;
+            // prevButton.disabled = currentPage == 1;
         
     } catch (error) {
         cosoq.log(`Erro ao carregar os detalhes do doguinho ${error}`);
